@@ -8,12 +8,7 @@ using UnityEngine;
 public class CloudMove : MonoBehaviour
 {
     //구름의 이동속도
-    private float speed;
-
-    private void Start()
-    {
-        speed = 0.2f;
-    }
+    public float speed;
 
     private void Update()
     {

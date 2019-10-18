@@ -17,7 +17,7 @@ public class CloudMaker : MonoBehaviour
         {
             float randomX = Random.Range(-7.0f, 7.0f);
             float randomY = Random.Range(0.0f, 4.0f);
-            int randomCloud = Random.Range(1, 2);
+            int randomCloud = Random.Range(1, 3);
 
             Vector2 position = new Vector2(randomX, randomY);
 
@@ -44,7 +44,7 @@ public class CloudMaker : MonoBehaviour
         //난수를 사용해 랜덤 시간마다 랜덤 높이에서 랜덤 구름 생성
         float randomTime = Random.Range(10.0f, 30.0f);
         float randomY = Random.Range(0.0f, 4.0f);
-        int randomCloud = Random.Range(1, 2);
+        int randomCloud = Random.Range(1, 3);
 
         Vector2 position = new Vector2(8, randomY);
 

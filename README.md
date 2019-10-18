@@ -13,4 +13,5 @@ WIP
 ### License
 Copyright (c) 2019 Jaewoong Cheon.  
 License under the MIT License.  
-Assets from Unity Asset Store.
+Assets from Unity Asset Store.  
+Font is CookieRun Font.
