@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * StageScene 관리 스크립트
+ * UI 컨트롤
+ */
 public class StageManager : MonoBehaviour
 {
     private void Update()
@@ -25,7 +29,8 @@ public class StageManager : MonoBehaviour
     //SpringButton
     public void Springbutton()
     {
-        
+        //SpringScene으로 이동
+        SceneManager.LoadScene("Spring");
     }
 
     //SummerButton
