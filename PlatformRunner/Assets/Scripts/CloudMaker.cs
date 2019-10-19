@@ -19,7 +19,7 @@ public class CloudMaker : MonoBehaviour
             float randomY = Random.Range(0.0f, 4.0f);
             int randomCloud = Random.Range(1, 3);
 
-            Vector2 position = new Vector2(randomX, randomY);
+            Vector3 position = new Vector3(randomX, randomY, 3);
 
             if (randomCloud == 1)
                 Instantiate(Cloud1, position, transform.rotation);
@@ -46,7 +46,7 @@ public class CloudMaker : MonoBehaviour
         float randomY = Random.Range(0.0f, 4.0f);
         int randomCloud = Random.Range(1, 3);
 
-        Vector2 position = new Vector2(8, randomY);
+        Vector3 position = new Vector3(8, randomY, 3);
 
         if (randomCloud == 1)
             Instantiate(Cloud1, position, transform.rotation);
