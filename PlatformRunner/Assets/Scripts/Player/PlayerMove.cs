@@ -91,7 +91,6 @@ public class PlayerMove : MonoBehaviour
 
     public void MoveButtonUp()
     {
-        rigid.velocity = new Vector2(0, rigid.velocity.y);
         animationScript.SetAnimationRun(false);
         moveDir = 0;
     }

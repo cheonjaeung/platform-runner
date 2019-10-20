@@ -7,7 +7,7 @@ using UnityEngine;
  */
 public class CameraMove : MonoBehaviour
 {
-    //카메라가 따라갈 플레이어
+    //따라갈 플레이어
     public GameObject player;
 
     private void LateUpdate()

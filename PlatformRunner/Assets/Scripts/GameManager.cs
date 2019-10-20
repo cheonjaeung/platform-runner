@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     //게임 진행 관리 변수
-    private string curruntSceneName;
+    private string currentSceneName;
     
     private void Awake()
     {
@@ -35,16 +35,10 @@ public class GameManager : MonoBehaviour
         
     }
 
-
-
-    /*
-     * 게임 진행 관리 함수
-     */
     //게임 시작시 작동하는 함수
     public void StartGame()
     {
-        //변수 초기화
-        curruntSceneName = "Title";
+        SetCurrentSceneName("Title");
     }
 
     //게임 중지시 작동하는 함수
@@ -66,5 +60,17 @@ public class GameManager : MonoBehaviour
     {
         //게임 종료
         Application.Quit();
+    }
+
+    //현재 씬 이름 변수를 변경하는 함수
+    public void SetCurrentSceneName(string name)
+    {
+        currentSceneName = name;
+    }
+
+    //현재 씬 이름 변수를 가져오는 함수
+    public string GetCurrentSceneName()
+    {
+        return currentSceneName;
     }
 }

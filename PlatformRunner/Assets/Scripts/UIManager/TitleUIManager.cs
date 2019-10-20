@@ -29,11 +29,13 @@ public class TitleUIManager : MonoBehaviour
     public void StartButton()
     {
         SceneManager.LoadScene("Stage");
+        manager.SetCurrentSceneName("Stage");
     }
 
     //게임종료 버튼
     public void QuitButton()
     {
+        manager.PauseGameStart();
         panel.SetActive(true);
     }
 
@@ -46,6 +48,7 @@ public class TitleUIManager : MonoBehaviour
     //게임종료 No 버튼
     public void NoButton()
     {
+        manager.PauseGameEnd();
         panel.SetActive(false);
     }
 }
