@@ -14,8 +14,8 @@ public class Player : MonoBehaviour
 
     //이동 제어 변수
     private int moveDir;
-    private bool isJumping;
-    private bool isAir;
+    private bool canJump;
+    private bool pressJump;
 
     //이동 수치 변수
     private float speed;
@@ -24,8 +24,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         moveDir = 0;
-        isJumping = false;
-        isAir = true;
+        canJump = false;
+        pressJump = false;
 
         speed = 5.0f;
         jumpPower = 500.0f;
@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
     {
         //이동 제어변수에 따라 이동
         //방향에 따라 스프라이트를 x방향으로 뒤집기
-        if(moveDir != 0)
+        if (moveDir != 0)
         {
             transform.Translate(Vector2.right * moveDir * speed * Time.deltaTime);
             animator.SetBool("isRunning", true);
@@ -74,25 +74,36 @@ public class Player : MonoBehaviour
             {
                 sprite.flipX = true;
             }
-            else if(moveDir == 1)
+            else if (moveDir == 1)
             {
                 sprite.flipX = false;
             }
         }
 
+        CheckGround();
+
         //점프제어변수에 따라 점프
-        if (isJumping)
+        if (canJump && pressJump)
         {
             rigid.AddForce(Vector2.up * jumpPower * Time.deltaTime, ForceMode2D.Impulse);
-            isJumping = false;
         }
+        pressJump = false;
     }
 
-    //땅과 충돌시 점프 초기화
-    private void OnTriggerEnter2D(Collider2D collision)
+    //레이캐스트로 바닥 확인
+    private void CheckGround()
     {
-        isAir = false;
-        isJumping = false;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.3f);
+        Debug.DrawRay(transform.position, Vector2.down * 0.3f, Color.red);
+        if (hit)
+        {
+            if (hit.transform.tag == "Ground")
+            {
+                canJump = true;
+                return;
+            }
+        }
+        canJump = false;
     }
 
     /* UI의 이동 버튼 컨트롤 */
@@ -115,15 +126,6 @@ public class Player : MonoBehaviour
 
     public void JumpButton()
     {
-        //공중에 있지 않을 때만 점프 가능
-        if (!isAir)
-        {
-            isAir = true;
-            isJumping = true;
-        }
-        else
-        {
-            return;
-        }
+        pressJump = true;
     }
 }
