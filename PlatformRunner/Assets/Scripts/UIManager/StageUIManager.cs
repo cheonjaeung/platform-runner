@@ -29,9 +29,17 @@ public class StageUIManager : MonoBehaviour
         }
     }
 
+    //뒤로가기 버튼
     public void BackButton()
     {
         SceneManager.LoadScene("Title");
         manager.SetCurrentSceneName("Title");
+    }
+
+    //봄 스테이지 버튼
+    public void Springbutton()
+    {
+        SceneManager.LoadScene("Spring");
+        manager.SetCurrentSceneName("Spring");
     }
 }

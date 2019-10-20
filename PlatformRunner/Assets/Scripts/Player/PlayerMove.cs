@@ -7,9 +7,9 @@ using UnityEngine;
  */
 public class PlayerMove : MonoBehaviour
 {
-    private Rigidbody2D rigid;
-    private SpriteRenderer sprite;
-    private PlayerAnimation animationScript;
+    public Rigidbody2D rigid;
+    public SpriteRenderer sprite;
+    public PlayerAnimation animationScript;
 
     //이동 제어 변수
     private int moveDir;
@@ -18,47 +18,48 @@ public class PlayerMove : MonoBehaviour
 
     //이동 수치 변수
     private float speed;
-    private float maxSpeed;
     private float jumpPower;
 
     private void Start()
     {
-        rigid = gameObject.GetComponent<Rigidbody2D>();
-        sprite = gameObject.GetComponent<SpriteRenderer>();
-        animationScript = gameObject.GetComponent<PlayerAnimation>();
+        animationScript = GetComponent<PlayerAnimation>();
 
         moveDir = 0;
         isJumping = false;
         isAir = true;
 
-        speed = 50.0f;
-        maxSpeed = 5.0f;
-        jumpPower = 400.0f;
+        speed = 5.0f;
+        jumpPower = 500.0f;
+        Debug.Log("초기화");
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow))
+            LeftButtonDown();
+        if (Input.GetKey(KeyCode.RightArrow))
+            RightButtonDown();
+        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+            MoveButtonUp();
+        if (Input.GetKey(KeyCode.Space))
+            JumpButton();
     }
 
     private void FixedUpdate()
     {
         //이동 제어변수에 따라 이동
-        //방향에 따라 스프라이트를 x방향으로 뒤집고 최고속도를 넘을수 없도록
+        //방향에 따라 스프라이트를 x방향으로 뒤집기
         if(moveDir != 0)
         {
-            rigid.AddForce(Vector2.right * moveDir * speed * Time.deltaTime, ForceMode2D.Impulse);
+            transform.Translate(Vector2.right * moveDir * speed * Time.deltaTime);
             animationScript.SetAnimationRun(true);
             if(moveDir == -1)
             {
                 sprite.flipX = true;
-                if (rigid.velocity.x < -maxSpeed)
-                {
-                    rigid.velocity = new Vector2(-maxSpeed, rigid.velocity.y);
-                }
             }
             else if(moveDir == 1)
             {
                 sprite.flipX = false;
-                if (rigid.velocity.x > maxSpeed)
-                {
-                    rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
-                }
             }
         }
 
@@ -72,10 +73,12 @@ public class PlayerMove : MonoBehaviour
     }
 
     //충돌시 다시 점프가 가능하도록 변경
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         animationScript.SetAnimationJumpStop();
         isAir = false;
+        Debug.Log("점프 초기화");
+
     }
 
     /* UI의 이동 버튼 컨트롤 */
@@ -91,6 +94,7 @@ public class PlayerMove : MonoBehaviour
 
     public void MoveButtonUp()
     {
+        rigid.velocity = new Vector2(0, rigid.velocity.y);
         animationScript.SetAnimationRun(false);
         moveDir = 0;
     }

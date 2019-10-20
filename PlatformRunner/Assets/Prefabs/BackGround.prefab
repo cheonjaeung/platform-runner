@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 3189251474856953125, guid: 9ec3365b17c993444a56e169ad43b49c, type: 3}
-  player: {fileID: 5341305103640816713, guid: 64a6e5fb9cec08341be2f8970b2633ab, type: 3}
+  player: {fileID: 5885458305591992751, guid: 64a6e5fb9cec08341be2f8970b2633ab, type: 3}
 --- !u!1 &1631243957363040702
 GameObject:
   m_ObjectHideFlags: 0
