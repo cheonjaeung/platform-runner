@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 /*
  * Spring Scene의 UI 스크립트
  */
-public class SpringUIManager : MonoBehaviour
+public class GameUIManager : MonoBehaviour
 {
     public GameManager manager;
     public GameObject panel;
@@ -14,6 +14,15 @@ public class SpringUIManager : MonoBehaviour
     private void Start()
     {
         panel.SetActive(false);
+    }
+
+    private void Update()
+    {
+        //뒤로가기 버튼 입력시 퍼즈 버튼과 같은 행동
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseButton();
+        }
     }
 
     //퍼즈 버튼
@@ -33,7 +42,7 @@ public class SpringUIManager : MonoBehaviour
     //재시작 버튼
     public void RestartButton()
     {
-        SceneManager.LoadScene("Spring");
+        manager.RestartScene();
         manager.PauseGameEnd();
     }
 

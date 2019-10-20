@@ -10,28 +10,24 @@ public class PlayerAnimation : MonoBehaviour
     public Rigidbody2D rigid;
     public Animator animator;
 
-    //점프 애니메이션 제어 변수
-    private bool isJumping;
-
-    private void Start()
-    {
-        isJumping = false;
-    }
-
     private void Update()
     {
-        //점프중일 때에만 점프 애니메이션 작동
-        if (isJumping)
+        //플레이어의 y축 이동량이 일정수치 이상일 경우 애니메이션 적용
+        if(rigid.velocity.y < -0.01 || rigid.velocity.y > 0.01)
         {
             float velocity = rigid.velocity.y;
-            if(velocity > 0)
+            if (velocity > 0)
             {
                 animator.SetInteger("jumpDir", 1);
             }
-            else if(velocity <= 0)
+            else if (velocity <= 0)
             {
                 animator.SetInteger("jumpDir", -1);
             }
+        }
+        else
+        {
+            animator.SetInteger("jumpDir", 0);
         }
     }
 
@@ -39,18 +35,5 @@ public class PlayerAnimation : MonoBehaviour
     public void SetAnimationRun(bool value)
     {
         animator.SetBool("isRunning", value);
-    }
-
-    //점프 애니메이션 시작
-    public void SetAnimationJumpStart()
-    {
-        isJumping = true;
-    }
-
-    //점프 애니메이션 중지
-    public void SetAnimationJumpStop()
-    {
-        animator.SetInteger("jumpDir", 0);
-        isJumping = false;
     }
 }

@@ -39,7 +39,7 @@ public class StageUIManager : MonoBehaviour
     //봄 스테이지 버튼
     public void Springbutton()
     {
-        SceneManager.LoadScene("Spring");
-        manager.SetCurrentSceneName("Spring");
+        SceneManager.LoadScene("Spring1");
+        manager.SetCurrentSceneName("Spring1");
     }
 }
