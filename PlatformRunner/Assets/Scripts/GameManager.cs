@@ -55,6 +55,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    //씬 재시작시 작동하는 함수
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(currentSceneName);
+    }
+
     //게임 종료시 작동하는 함수
     public void QuitGame()
     {
