@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * Player 이동 제어 스크립트
+ * Player 제어 스크립트
  */
-public class PlayerMove : MonoBehaviour
+public class Player : MonoBehaviour
 {
+    public GameManager manager;
     public Rigidbody2D rigid;
     public SpriteRenderer sprite;
     public PlayerAnimation animationScript;
@@ -30,7 +31,6 @@ public class PlayerMove : MonoBehaviour
 
         speed = 5.0f;
         jumpPower = 500.0f;
-        Debug.Log("초기화");
     }
 
     private void Update()
@@ -72,13 +72,29 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    //충돌시 다시 점프가 가능하도록 변경
+    //땅과 충돌시 점프 초기화
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        animationScript.SetAnimationJumpStop();
-        isAir = false;
-        Debug.Log("점프 초기화");
+        //충돌체의 태그를 받아옴
+        string tag = collision.transform.tag;
 
+        if(tag == "Ground")
+        {
+            animationScript.SetAnimationJumpStop();
+            isAir = false;
+        }
+    }
+
+    //적과 충돌시 게임 재시작
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //충돌체의 태그를 받아옴
+        string tag = collision.transform.tag;
+
+        if (tag == "Enemy")
+        {
+            manager.RestartScene();
+        }
     }
 
     /* UI의 이동 버튼 컨트롤 */
