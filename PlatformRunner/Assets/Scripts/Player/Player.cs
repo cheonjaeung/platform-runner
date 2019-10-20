@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public GameManager manager;
     public Rigidbody2D rigid;
     public SpriteRenderer sprite;
-    public PlayerAnimation animationScript;
+    public Animator animator;
 
     //이동 제어 변수
     private int moveDir;
@@ -23,8 +23,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        animationScript = GetComponent<PlayerAnimation>();
-
         moveDir = 0;
         isJumping = false;
         isAir = true;
@@ -35,14 +33,33 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        //유니티 에디터(PC)에서 테스트하기 위해 추가
         if (Input.GetKey(KeyCode.LeftArrow))
             LeftButtonDown();
         if (Input.GetKey(KeyCode.RightArrow))
             RightButtonDown();
         if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
             MoveButtonUp();
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
             JumpButton();
+
+        //플레이어의 y축 이동량이 일정수치 이상일 경우 점프 애니메이션 적용
+        if (rigid.velocity.y < -0.01 || rigid.velocity.y > 0.01)
+        {
+            float velocity = rigid.velocity.y;
+            if (velocity > 0)
+            {
+                animator.SetInteger("jumpDir", 1);
+            }
+            else if (velocity <= 0)
+            {
+                animator.SetInteger("jumpDir", -1);
+            }
+        }
+        else
+        {
+            animator.SetInteger("jumpDir", 0);
+        }
     }
 
     private void FixedUpdate()
@@ -52,8 +69,8 @@ public class Player : MonoBehaviour
         if(moveDir != 0)
         {
             transform.Translate(Vector2.right * moveDir * speed * Time.deltaTime);
-            animationScript.SetAnimationRun(true);
-            if(moveDir == -1)
+            animator.SetBool("isRunning", true);
+            if (moveDir == -1)
             {
                 sprite.flipX = true;
             }
@@ -67,7 +84,6 @@ public class Player : MonoBehaviour
         if (isJumping)
         {
             rigid.AddForce(Vector2.up * jumpPower * Time.deltaTime, ForceMode2D.Impulse);
-            animationScript.SetAnimationJumpStart();
             isJumping = false;
         }
     }
@@ -75,26 +91,8 @@ public class Player : MonoBehaviour
     //땅과 충돌시 점프 초기화
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //충돌체의 태그를 받아옴
-        string tag = collision.transform.tag;
-
-        if(tag == "Ground")
-        {
-            animationScript.SetAnimationJumpStop();
-            isAir = false;
-        }
-    }
-
-    //적과 충돌시 게임 재시작
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //충돌체의 태그를 받아옴
-        string tag = collision.transform.tag;
-
-        if (tag == "Enemy")
-        {
-            manager.RestartScene();
-        }
+        isAir = false;
+        isJumping = false;
     }
 
     /* UI의 이동 버튼 컨트롤 */
@@ -111,7 +109,7 @@ public class Player : MonoBehaviour
     public void MoveButtonUp()
     {
         rigid.velocity = new Vector2(0, rigid.velocity.y);
-        animationScript.SetAnimationRun(false);
+        animator.SetBool("isRunning", false);
         moveDir = 0;
     }
 
