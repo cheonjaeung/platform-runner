@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * 배경이 자동으로 움직이게 하는 스크립트
+ * 하늘이 자동으로 움직이게 하는 스크립트
  */
-public class BackgroundRepeat : MonoBehaviour
+public class SkyRepeat : MonoBehaviour
 {
     //스크롤 속도
     public float speed;

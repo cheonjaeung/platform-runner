@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
 
 
     /*
-     * --------------------------------------------------
      * 게임 진행 관리 함수
      */
     //게임 시작시 작동하는 함수
@@ -68,5 +67,4 @@ public class GameManager : MonoBehaviour
         //게임 종료
         Application.Quit();
     }
-    //--------------------------------------------------
 }
