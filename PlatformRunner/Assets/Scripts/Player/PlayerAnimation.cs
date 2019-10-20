@@ -7,16 +7,15 @@ using UnityEngine;
  */
 public class PlayerAnimation : MonoBehaviour
 {
-    private Rigidbody2D rigid;
-    private Animator animator;
+    public Rigidbody2D rigid;
+    public Animator animator;
 
     //점프 애니메이션 제어 변수
     private bool isJumping;
 
     private void Start()
     {
-        rigid = gameObject.GetComponent<Rigidbody2D>();
-        animator = gameObject.GetComponent<Animator>();
+        isJumping = false;
     }
 
     private void Update()
