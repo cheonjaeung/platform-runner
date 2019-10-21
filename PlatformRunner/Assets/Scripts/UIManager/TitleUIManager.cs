@@ -29,7 +29,6 @@ public class TitleUIManager : MonoBehaviour
     public void StartButton()
     {
         SceneManager.LoadScene("Stage");
-        manager.SetCurrentSceneName("Stage");
     }
 
     //게임종료 버튼

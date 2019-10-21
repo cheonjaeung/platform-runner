@@ -32,13 +32,17 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        
+        //현재 활성화된 씬 이름과 변수가 같지 않으면 변수에 이름 대입
+        if(currentSceneName != SceneManager.GetActiveScene().name)
+        {
+            currentSceneName = SceneManager.GetActiveScene().name;
+            Debug.Log("Update currentSceneName : " + currentSceneName);
+        }
     }
 
     //게임 시작시 작동하는 함수
     public void StartGame()
     {
-        SetCurrentSceneName("Title");
     }
 
     //게임 중지시 작동하는 함수
@@ -66,12 +70,6 @@ public class GameManager : MonoBehaviour
     {
         //게임 종료
         Application.Quit();
-    }
-
-    //현재 씬 이름 변수를 변경하는 함수
-    public void SetCurrentSceneName(string name)
-    {
-        currentSceneName = name;
     }
 
     //현재 씬 이름 변수를 가져오는 함수

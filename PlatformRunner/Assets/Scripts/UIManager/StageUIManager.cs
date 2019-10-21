@@ -33,13 +33,11 @@ public class StageUIManager : MonoBehaviour
     public void BackButton()
     {
         SceneManager.LoadScene("Title");
-        manager.SetCurrentSceneName("Title");
     }
 
     //봄 스테이지 버튼
     public void Springbutton()
     {
         SceneManager.LoadScene("Spring1");
-        manager.SetCurrentSceneName("Spring1");
     }
 }
