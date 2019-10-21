@@ -2344,7 +2344,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 738981351}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1976579306}
+        m_MethodName: Spring1button
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &738981351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2613,7 +2624,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 788300001}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1976579306}
+        m_MethodName: Spring2button
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &788300001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4578,22 +4600,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 3189251474856953125, guid: 9ec3365b17c993444a56e169ad43b49c, type: 3}
-  Button1_1: {fileID: 738981348}
-  Button1_2: {fileID: 788299998}
-  Button1_3: {fileID: 2037047091}
-  Button1_4: {fileID: 413101518}
-  Button2_1: {fileID: 288855041}
-  Button2_2: {fileID: 1190436109}
-  Button2_3: {fileID: 353685974}
-  Button2_4: {fileID: 973673454}
-  Button3_1: {fileID: 2015523938}
-  Button3_2: {fileID: 79074568}
-  Button3_3: {fileID: 1058982501}
-  Button3_4: {fileID: 1911186429}
-  Button4_1: {fileID: 1345596185}
-  Button4_2: {fileID: 976061638}
-  Button4_3: {fileID: 1750906934}
-  Button4_4: {fileID: 243190221}
+  button1_1: {fileID: 738981348}
+  button1_2: {fileID: 788299998}
+  button1_3: {fileID: 2037047091}
+  button1_4: {fileID: 413101518}
+  button2_1: {fileID: 288855041}
+  button2_2: {fileID: 1190436109}
+  button2_3: {fileID: 353685974}
+  button2_4: {fileID: 973673454}
+  button3_1: {fileID: 2015523938}
+  button3_2: {fileID: 79074568}
+  button3_3: {fileID: 1058982501}
+  button3_4: {fileID: 1911186429}
+  button4_1: {fileID: 1345596185}
+  button4_2: {fileID: 976061638}
+  button4_3: {fileID: 1750906934}
+  button4_4: {fileID: 243190221}
+  springLock: {fileID: 8569646056155471025, guid: 6b29a609455a4b44b854940772cfc0c9,
+    type: 3}
+  summerLock: {fileID: -1914431725242729247, guid: 6b29a609455a4b44b854940772cfc0c9,
+    type: 3}
+  autumnLock: {fileID: -404335462747561873, guid: 6b29a609455a4b44b854940772cfc0c9,
+    type: 3}
+  winterLock: {fileID: 5118747142066363242, guid: 6b29a609455a4b44b854940772cfc0c9,
+    type: 3}
+  stageLock: 
 --- !u!1 &2001877558
 GameObject:
   m_ObjectHideFlags: 0

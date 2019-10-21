@@ -30,14 +30,20 @@ public class StageUIManager : MonoBehaviour
     public GameObject button4_3;
     public GameObject button4_4;
 
-    //열린 버튼 스프라이트
-    
-
     //잠긴 버튼 스프라이트
+    public Sprite springLock;
+    public Sprite summerLock;
+    public Sprite autumnLock;
+    public Sprite winterLock;
+
+    private bool[] stageLock;
 
     private void Start()
     {
-        
+        for(int i = 2; i < 16; i++)
+        {
+            ButtonLock(i);
+        }
     }
 
     private void Update()
@@ -49,6 +55,63 @@ public class StageUIManager : MonoBehaviour
         }
     }
 
+    //버튼 이미지를 잠금상태로 바꾸는 함수
+    //스테이지 씬 로드시 잠긴 스테이지를 표시하기 위해 사용
+    private void ButtonLock(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                button1_1.GetComponent<Image>().sprite = springLock;
+                break;
+            case 1:
+                button1_2.GetComponent<Image>().sprite = springLock;
+                break;
+            case 2:
+                button1_3.GetComponent<Image>().sprite = springLock;
+                break;
+            case 3:
+                button1_4.GetComponent<Image>().sprite = springLock;
+                break;
+            case 4:
+                button2_1.GetComponent<Image>().sprite = summerLock;
+                break;
+            case 5:
+                button2_2.GetComponent<Image>().sprite = summerLock;
+                break;
+            case 6:
+                button2_3.GetComponent<Image>().sprite = summerLock;
+                break;
+            case 7:
+                button2_4.GetComponent<Image>().sprite = summerLock;
+                break;
+            case 8:
+                button3_1.GetComponent<Image>().sprite = autumnLock;
+                break;
+            case 9:
+                button3_2.GetComponent<Image>().sprite = autumnLock;
+                break;
+            case 10:
+                button3_3.GetComponent<Image>().sprite = autumnLock;
+                break;
+            case 11:
+                button3_4.GetComponent<Image>().sprite = autumnLock;
+                break;
+            case 12:
+                button4_1.GetComponent<Image>().sprite = winterLock;
+                break;
+            case 13:
+                button4_2.GetComponent<Image>().sprite = winterLock;
+                break;
+            case 14:
+                button4_3.GetComponent<Image>().sprite = winterLock;
+                break;
+            case 15:
+                button4_4.GetComponent<Image>().sprite = winterLock;
+                break;
+        }
+    }
+    
     //뒤로가기 버튼
     public void BackButton()
     {
