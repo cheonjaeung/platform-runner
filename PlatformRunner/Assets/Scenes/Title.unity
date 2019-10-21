@@ -1399,6 +1399,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3189251474856953125, guid: 9ec3365b17c993444a56e169ad43b49c,
+        type: 3}
+      propertyPath: stageLock.Array.size
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 3189251474856953122, guid: 9ec3365b17c993444a56e169ad43b49c,
         type: 3}
       propertyPath: m_LocalPosition.x
