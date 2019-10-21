@@ -7128,7 +7128,7 @@ PrefabInstance:
     - target: {fileID: 3575669038874856388, guid: 4b60e44c826ee4841956c2f377776b36,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3575669038874856388, guid: 4b60e44c826ee4841956c2f377776b36,
         type: 3}
@@ -7492,7 +7492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322036664}
   m_Layer: 0
-  m_Name: Spikes
+  m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

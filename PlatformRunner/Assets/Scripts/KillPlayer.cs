@@ -13,7 +13,6 @@ public class KillPlayer : MonoBehaviour
     {
         //충돌체의 태그를 받아옴
         string tag = collision.transform.tag;
-
         if (tag == "Player")
         {
             manager.RestartScene();
