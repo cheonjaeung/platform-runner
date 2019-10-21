@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
         if(currentSceneName != SceneManager.GetActiveScene().name)
         {
             currentSceneName = SceneManager.GetActiveScene().name;
-            Debug.Log("Update currentSceneName : " + currentSceneName);
         }
     }
 
@@ -62,7 +61,7 @@ public class GameManager : MonoBehaviour
     //씬 재시작시 작동하는 함수
     public void RestartScene()
     {
-        SceneManager.LoadScene(currentSceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     //게임 종료시 작동하는 함수

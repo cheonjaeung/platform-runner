@@ -8,8 +8,6 @@ using UnityEngine.SceneManagement;
  */
 public class PortalFlower : MonoBehaviour
 {
-    public GameManager manager;
-
     //충돌시
     private void OnTriggerEnter2D(Collider2D collision)
     {
