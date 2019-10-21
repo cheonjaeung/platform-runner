@@ -129,7 +129,7 @@ public class StageUIManager : MonoBehaviour
     }
     public void Spring3button()
     {
-        //SceneManager.LoadScene("Spring_3");
+        SceneManager.LoadScene("Spring_3");
     }
     public void Spring4button()
     {
