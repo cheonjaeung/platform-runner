@@ -1,5 +1,5 @@
-[![Latest Release](https://img.shields.io/badge/Latest%20Release-v0.3.1-yellow)]
-[![Pre Release](https://img.shields.io/badge/Pre%20Release-v0.3.1-red)]
+[![Latest Release](https://img.shields.io/badge/Latest%20Release-v0.3.1-yellow)](https://github.com/CheonStudio/Minigame-A-Platform-Runner/releases/tag/v0.3.1)
+[![Pre Release](https://img.shields.io/badge/Pre%20Release-v0.3.1-red)](https://github.com/CheonStudio/Minigame-A-Platform-Runner/releases/tag/v0.3.1)
 
 # (English)Project Minigame A : Platform Runner
 Mobile, 2D, Platform Game.
