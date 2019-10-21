@@ -50,7 +50,6 @@ public class GameUIManager : MonoBehaviour
     public void BackButton()
     {
         SceneManager.LoadScene("Stage");
-        manager.SetCurrentSceneName("Stage");
         manager.PauseGameEnd();
     }
 }
