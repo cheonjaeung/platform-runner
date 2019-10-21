@@ -1,5 +1,5 @@
-https://img.shields.io/badge/Pre%20Release-v0.3.1-red
-https://img.shields.io/badge/Latest%20Release-v0.3.1-yellow
+[![Latest Release](https://img.shields.io/badge/Latest%20Release-v0.3.1-yellow)]
+[![Pre Release](https://img.shields.io/badge/Pre%20Release-v0.3.1-red)]
 
 # (English)Project Minigame A : Platform Runner
 Mobile, 2D, Platform Game.
