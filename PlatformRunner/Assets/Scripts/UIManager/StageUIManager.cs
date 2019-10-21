@@ -40,7 +40,7 @@ public class StageUIManager : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 2; i < 16; i++)
+        for(int i = 3; i < 16; i++)
         {
             ButtonLock(i);
         }

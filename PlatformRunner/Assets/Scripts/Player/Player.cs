@@ -88,6 +88,13 @@ public class Player : MonoBehaviour
             rigid.AddForce(Vector2.up * jumpPower * Time.deltaTime, ForceMode2D.Impulse);
         }
         pressJump = false;
+
+        //낙하속도가 일정 이상 빨라지면 더이상 빨라지지 않도록
+        //너무 빨라지면 지형을 뚫고 들어간다.
+        if(rigid.velocity.y < -15.0f)
+        {
+            rigid.velocity = new Vector2(rigid.velocity.x, -15.0f);
+        }
     }
 
     //레이캐스트로 바닥 확인
