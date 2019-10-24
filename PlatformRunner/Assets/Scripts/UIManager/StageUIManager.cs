@@ -40,7 +40,7 @@ public class StageUIManager : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 3; i < 16; i++)
+        for(int i = 4; i < 16; i++)
         {
             ButtonLock(i);
         }
@@ -121,19 +121,19 @@ public class StageUIManager : MonoBehaviour
     //봄 스테이지 버튼
     public void Spring1button()
     {
-        SceneManager.LoadScene("Spring_1");
+        SceneManager.LoadScene("Stage1_1");
     }
     public void Spring2button()
     {
-        SceneManager.LoadScene("Spring_2");
+        SceneManager.LoadScene("Stage1_2");
     }
     public void Spring3button()
     {
-        SceneManager.LoadScene("Spring_3");
+        SceneManager.LoadScene("Stage1_3");
     }
     public void Spring4button()
     {
-        //SceneManager.LoadScene("Spring_4");
+        SceneManager.LoadScene("Stage1_4");
     }
 
     //여름 스테이지 버튼
