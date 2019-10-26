@@ -17,18 +17,6 @@ public class StageUIManager : MonoBehaviour
     public GameObject button1_2;
     public GameObject button1_3;
     public GameObject button1_4;
-    public GameObject button2_1;
-    public GameObject button2_2;
-    public GameObject button2_3;
-    public GameObject button2_4;
-    public GameObject button3_1;
-    public GameObject button3_2;
-    public GameObject button3_3;
-    public GameObject button3_4;
-    public GameObject button4_1;
-    public GameObject button4_2;
-    public GameObject button4_3;
-    public GameObject button4_4;
 
     //잠긴 버튼 스프라이트
     public Sprite springLock;
@@ -73,42 +61,6 @@ public class StageUIManager : MonoBehaviour
             case 3:
                 button1_4.GetComponent<Image>().sprite = springLock;
                 break;
-            case 4:
-                button2_1.GetComponent<Image>().sprite = summerLock;
-                break;
-            case 5:
-                button2_2.GetComponent<Image>().sprite = summerLock;
-                break;
-            case 6:
-                button2_3.GetComponent<Image>().sprite = summerLock;
-                break;
-            case 7:
-                button2_4.GetComponent<Image>().sprite = summerLock;
-                break;
-            case 8:
-                button3_1.GetComponent<Image>().sprite = autumnLock;
-                break;
-            case 9:
-                button3_2.GetComponent<Image>().sprite = autumnLock;
-                break;
-            case 10:
-                button3_3.GetComponent<Image>().sprite = autumnLock;
-                break;
-            case 11:
-                button3_4.GetComponent<Image>().sprite = autumnLock;
-                break;
-            case 12:
-                button4_1.GetComponent<Image>().sprite = winterLock;
-                break;
-            case 13:
-                button4_2.GetComponent<Image>().sprite = winterLock;
-                break;
-            case 14:
-                button4_3.GetComponent<Image>().sprite = winterLock;
-                break;
-            case 15:
-                button4_4.GetComponent<Image>().sprite = winterLock;
-                break;
         }
     }
     
@@ -118,75 +70,21 @@ public class StageUIManager : MonoBehaviour
         SceneManager.LoadScene("Title");
     }
 
-    //봄 스테이지 버튼
-    public void Spring1button()
+    //스테이지 버튼
+    public void Stage1Button()
     {
         SceneManager.LoadScene("Stage1_1");
     }
-    public void Spring2button()
+    public void Stage2Button()
     {
         SceneManager.LoadScene("Stage1_2");
     }
-    public void Spring3button()
+    public void Stage3Button()
     {
         SceneManager.LoadScene("Stage1_3");
     }
-    public void Spring4button()
+    public void Stage4Button()
     {
         SceneManager.LoadScene("Stage1_4");
-    }
-
-    //여름 스테이지 버튼
-    public void Summer1Button()
-    {
-        //SceneManager.LoadScene("Summer_1");
-    }
-    public void Summer2Button()
-    {
-        //SceneManager.LoadScene("Summer_2");
-    }
-    public void Summer3Button()
-    {
-        //SceneManager.LoadScene("Summer_3");
-    }
-    public void Summer4Button()
-    {
-        //SceneManager.LoadScene("Summer_4");
-    }
-
-    //가을 스테이지 버튼
-    public void Autumn1Button()
-    {
-        //SceneManager.LoadScene("Autumn_1");
-    }
-    public void Autumn2Button()
-    {
-        //SceneManager.LoadScene("Autumn_3");
-    }
-    public void Autumn3Button()
-    {
-        //SceneManager.LoadScene("Autumn_3");
-    }
-    public void Autumn4Button()
-    {
-        //SceneManager.LoadScene("Autumn_4");
-    }
-
-    //겨울 스테이지 버튼
-    public void Winter1Button()
-    {
-        //SceneManager.LoadScene("Winter_1");
-    }
-    public void Winter2Button()
-    {
-        //SceneManager.LoadScene("Winter_2");
-    }
-    public void Winter3Button()
-    {
-        //SceneManager.LoadScene("Winter_3");
-    }
-    public void Winter4Button()
-    {
-        //SceneManager.LoadScene("Winter_4");
     }
 }

@@ -13,13 +13,10 @@ public class SawMove : MonoBehaviour
     public float speed;
     //현재 이동 방향
     private int moveDir;
-    //톱의 회전을 위해 스프라이트 컴포넌트 사용
-    private SpriteRenderer sprite;
 
     private void Start()
     {
         moveDir = 1;
-        sprite = gameObject.GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
