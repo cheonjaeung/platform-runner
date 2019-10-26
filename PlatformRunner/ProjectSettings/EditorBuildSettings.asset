@@ -12,12 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage.unity
     guid: 19fd7346a16ab394bb4315886e49d601
   - enabled: 1
-    path: Assets/Scenes/Spring/Spring_1.unity
+    path: Assets/Scenes/Stage1/Stage1_1.unity
     guid: fb41eaceeefd5084a877adaeaf64b237
   - enabled: 1
-    path: Assets/Scenes/Spring/Spring_2.unity
+    path: Assets/Scenes/Stage1/Stage1_2.unity
     guid: 58be53b32490adf4a894e9bec651fc36
   - enabled: 1
-    path: Assets/Scenes/Spring/Spring_3.unity
+    path: Assets/Scenes/Stage1/Stage1_3.unity
     guid: 33cce1d341b9bd84a8190bc5462d5a4d
+  - enabled: 1
+    path: Assets/Scenes/Stage1/Stage1_4.unity
+    guid: 66cb8883fcdd2874f8a82fb2d33dc798
   m_configObjects: {}
