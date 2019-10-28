@@ -1,6 +1,6 @@
-[![License](https://img.shields.io/badge/License-MIT-lightgrey)](https://github.com/CheonStudio/Minigame-A-Platform-Runner/blob/master/LICENSE)
-[![Latest Release](https://img.shields.io/badge/Latest%20Release-v0.4.1-yellow)](https://github.com/CheonStudio/Minigame-A-Platform-Runner/releases/tag/v0.4.1)
-# (English)Project Minigame A : Platform Runner
+[![License](https://img.shields.io/badge/License-MIT-lightgrey)](https://github.com/EntimerDev/Platform-Runner/blob/master/LICENSE)
+[![Latest Release](https://img.shields.io/badge/Latest%20Release-v0.4.1-yellow)](https://github.com/EntimerDev/Platform-Runner/releases/tag/v0.4.1)
+# (English)Platform Runner
 Mobile, 2D, Platform Game.
 
 ### Introduction
@@ -26,7 +26,7 @@ This project uses assets from Unity Asset Store.
 This project uses CookieRun font of DEVSISTERS Corp.  
 
 
-# (한국어)프로젝트 미니게임 A : 플랫폼 러너
+# (한국어)플랫폼 러너
 모바일, 2D, 플랫폼 게임.
 
 ### 소개
