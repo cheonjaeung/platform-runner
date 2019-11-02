@@ -1500,7 +1500,7 @@ PrefabInstance:
     - target: {fileID: 7850049324660738244, guid: 397b6f36b3995e44f8dd92064807e7ec,
         type: 3}
       propertyPath: m_Text
-      value: "\uBD04-3"
+      value: 1-3
       objectReference: {fileID: 0}
     - target: {fileID: 7850049324731347687, guid: 397b6f36b3995e44f8dd92064807e7ec,
         type: 3}

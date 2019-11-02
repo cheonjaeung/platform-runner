@@ -8193,6 +8193,11 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MoveButtonUp
       objectReference: {fileID: 0}
+    - target: {fileID: 7850049324660738244, guid: 397b6f36b3995e44f8dd92064807e7ec,
+        type: 3}
+      propertyPath: m_Text
+      value: 1-2
+      objectReference: {fileID: 0}
     - target: {fileID: 7850049324731347687, guid: 397b6f36b3995e44f8dd92064807e7ec,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8202,26 +8207,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: JumpButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850049324709568857, guid: 397b6f36b3995e44f8dd92064807e7ec,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 844082844}
-    - target: {fileID: 7850049324709568857, guid: 397b6f36b3995e44f8dd92064807e7ec,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseEndButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850049323242896922, guid: 397b6f36b3995e44f8dd92064807e7ec,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 844082844}
-    - target: {fileID: 7850049323242896922, guid: 397b6f36b3995e44f8dd92064807e7ec,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartButton
       objectReference: {fileID: 0}
     - target: {fileID: 7850049323219492254, guid: 397b6f36b3995e44f8dd92064807e7ec,
         type: 3}
@@ -8233,10 +8218,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: BackButton
       objectReference: {fileID: 0}
-    - target: {fileID: 7850049324660738244, guid: 397b6f36b3995e44f8dd92064807e7ec,
+    - target: {fileID: 7850049323242896922, guid: 397b6f36b3995e44f8dd92064807e7ec,
         type: 3}
-      propertyPath: m_Text
-      value: "\uBD04-2"
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 844082844}
+    - target: {fileID: 7850049323242896922, guid: 397b6f36b3995e44f8dd92064807e7ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7850049324709568857, guid: 397b6f36b3995e44f8dd92064807e7ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 844082844}
+    - target: {fileID: 7850049324709568857, guid: 397b6f36b3995e44f8dd92064807e7ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseEndButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 397b6f36b3995e44f8dd92064807e7ec, type: 3}

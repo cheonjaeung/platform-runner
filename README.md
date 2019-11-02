@@ -4,7 +4,7 @@
 > :video_game: 2D, platform game for android
 
 ## Requirement
-- Android Phone(5.0 or higher version)  
+- Android 5.0 'Lolipop' or higher 
 
 ## Installation
 1. Go to releases page in my github  
