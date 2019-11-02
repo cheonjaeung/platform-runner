@@ -310,7 +310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Version 0.4.1
+  m_Text: Version 0.4.2
 --- !u!222 &437104362
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1472,15 +1472,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3189251474856953123, guid: 9ec3365b17c993444a56e169ad43b49c,
-        type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
     - target: {fileID: 3189251474856953125, guid: 9ec3365b17c993444a56e169ad43b49c,
         type: 3}
       propertyPath: stageLock.Array.size
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3189251474856953123, guid: 9ec3365b17c993444a56e169ad43b49c,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 3189251474856953122, guid: 9ec3365b17c993444a56e169ad43b49c,
         type: 3}
