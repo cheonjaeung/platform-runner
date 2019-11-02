@@ -4,7 +4,7 @@
 > :video_game: 2D, platform game for android
 
 ## Requirement
-- Android 5.0 'Lolipop' or higher 
+- Android 5.0 'Lolipop' or higher
 
 ## Installation
 1. Go to releases page in my github  
@@ -19,8 +19,7 @@ Right Arrow: Move Right
 Up Arrow: Jump
 
 ## Screenshots
-![](screenshot1 url)
-![](screenshot2 url)
+![](https://github.com/EntimerDev/Platform-Runner/blob/master/screenshot.jpg)
 
 ## License
 Copyright (c) 2019 Jeawoong Cheon Under MIT License All Images  
