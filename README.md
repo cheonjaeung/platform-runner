@@ -1,52 +1,27 @@
-[![License](https://img.shields.io/badge/License-MIT-lightgrey)](https://github.com/EntimerDev/Platform-Runner/blob/master/LICENSE)
-[![Latest Release](https://img.shields.io/badge/Latest%20Release-v0.4.1-yellow)](https://github.com/EntimerDev/Platform-Runner/releases/tag/v0.4.1)
-# (English)Platform Runner
-Mobile, 2D, Platform Game.
+# Platform Runner
+[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/EntimerDev/Platform-Runner/blob/master/LICENSE)
+[![Version](https://img.shields.io/badge/Version-v0.4.2-green)](https://github.com/EntimerDev/Platform-Runner/releases/tag/v0.4.2)  
+> :video_game: 2D, platform game for android
 
-### Introduction
-Player should run and jump to the goal.
+## Requirement
+- Android 5.0 'Lolipop' or higher
 
-### Installation
-1. Go to releases page in my github. 
-2. Click a version what you want.  
-3. Open assets and download apk.  
-4. Run apk on your device.  
-5. Play!
+## Installation
+1. Go to releases page in my github  
+2. Click a version what you want  
+3. Open assets and download apk  
+4. Run apk on your device  
+5. Play!  
 
-### Simple guide
-Left Arrow: Move left  
-Right Arrow: Move right  
-Up Arrow: Jump  
-Run and jump to the goal!
+## Quickstart
+Left Arrow: Move Left  
+Right Arrow: Move Right  
+Up Arrow: Jump
 
-### License
-Copyright (c) 2019 Jaewoong Cheon.  
-This project is under the MIT License.  
-This project uses assets from Unity Asset Store.  
-This project uses CookieRun font of DEVSISTERS Corp.  
+## Screenshots
+![](https://github.com/EntimerDev/Platform-Runner/blob/master/screenshot.jpg)
 
-
-# (한국어)플랫폼 러너
-모바일, 2D, 플랫폼 게임.
-
-### 소개
-목표를 향해 달리고 점프해야 합니다.
-
-### 설치
-1. 제 깃허브 페이지에서 릴리즈로 들어갑니다.  
-2. 원하는 버전을 선택합니다.  
-3. 에셋을 열어 apk를 다운로드 합니다.  
-4. apk를 실행해 기기에 설치합니다.  
-5. 플레이!
-
-### 간단 가이드
-왼쪽 화살표: 왼쪽 이동  
-오른쪽 화살표: 오른쪽 이동  
-위쪽 화살표: 점프  
-목표를 향해 달리고 점프하세요!
-
-### 라이센스
-Copyright (c) 2019 Jaewoong Cheon.  
-이 프로젝트는 MIT 라이선스를 따릅니다.  
-이 프로젝트는 유니티 에셋 스토어의 에셋을 사용하였습니다.  
-이 프로젝트는 데브시스터즈 주식회사의 쿠키런 글꼴을 사용합니다.
+## License
+Copyright (c) 2019 Jeawoong Cheon Under MIT License All Images  
+Assets from Unity Asset Store  
+Font from CookieRun font of DEVSISTERS Corp  
